@@ -1,0 +1,40 @@
+@media(max-width: 768px) {
+    .header-nav .open-hamburger{
+        position: absolute;
+        top: 110px;
+        right: 16px;
+        width: calc(100vw - 32px);
+        padding: 24px;
+        text-align: center;
+        background-color: white;
+        color: var(--light-grayish-blue);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .header-nav .open-hamburger .header-link {
+        color: var(--dark-grayish-blu);
+    }
+        
+    .header-nav .open-hamburger .header-link:hover {
+        color: black;
+    }
+    
+    .header-nav .open-hamburger .header-button {
+        background-color: var(--yellow);
+    }
+    
+    .header-nav .open-hamburger .header-button:hover {
+        background-color: hsl(53, 100%, 49%);
+        color: black;
+    }
+    
+    .header-nav .open-hamburger::after {
+        content: "";
+        position: absolute;
+        border-width: 30px 30px;
+        border-color: transparent white transparent transparent;
+        top: -28px;
+        right: 0;
+    }
+}
