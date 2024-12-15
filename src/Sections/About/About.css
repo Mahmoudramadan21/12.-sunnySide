@@ -24,7 +24,6 @@
 
 .about #about-2 .item-link::before {
     background-color: var(--soft-red);
-    opacity: 0.7;
 }
 
 .about #about-2 .item-link:hover::before {
