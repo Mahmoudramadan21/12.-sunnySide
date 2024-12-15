@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "./Header.css";
+import logo from "../../images/logo.svg"
 import hamburager from "../../images/icon-hamburger.svg";
 
 function Header() {
@@ -22,7 +23,7 @@ function Header() {
         <header className='py-6'>
             <div className="container mx-auto px-4 flex justify-between items-center">
                 <div className="header-logo">
-                    <a href="#"><h2 className='text-4xl font-bold text-slate-50'>sunnyside</h2></a>
+                    <a href="#"><img src={logo} alt="suunySide Logo" /></a>
                 </div>
                 <nav className="header-nav" aria-label="Main navigation">
                     <ul className={navClasses}>

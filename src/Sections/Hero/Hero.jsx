@@ -5,8 +5,8 @@ import scrollIndicator from "../../images/icon-arrow-down.svg";
 function Hero() {
     // Define CSS classes as variables
     const containerClasses = `container mx-auto px-4 flex flex-col items-center 
-                               text-center p-24 lg:gap-36 md:gap-12 gap-20 
-                               lg:p-24 md:p-16`;
+                               text-center lg:gap-28 md:gap-16 gap-20 
+                               lg:p-32 md:p-24 p-16`;
 
     const headingClasses = 'hero-heading uppercase font-fraunces text-white tracking-widest md:text-7xl text-5xl';
 
