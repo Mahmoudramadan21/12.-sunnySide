@@ -14,11 +14,17 @@
   --white: hsl(0, 0%, 100%);
 }
 
-.header-hero-wrapper {
+/* .header-hero-wrapper { */
+header, .hero {
   background-image: url("./images/desktop/image-header.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+header {
+  background-position: top;
+  background-size:auto;
 }
 
 @media (max-width: 768px) {

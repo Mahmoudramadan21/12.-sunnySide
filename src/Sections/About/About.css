@@ -5,6 +5,7 @@
 .about .item-link {
     position: relative;
     width: fit-content;
+    left: 10px;
 }
 
 .about .item-link::before {
@@ -21,11 +22,11 @@
     transition: 0.3s;
 }
 
-.about .row-2 .item-link::before{
+.about #about-2 .item-link::before {
     background-color: var(--soft-red);
     opacity: 0.7;
 }
 
-.about .item-link:hover::before{
+.about #about-2 .item-link:hover::before {
     opacity: 1;
 }

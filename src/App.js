@@ -1,23 +1,23 @@
 import './App.css';
-import About from './Sections/About/About';
-import Footer from './Sections/Footer/Footer';
-import Gallery from './Sections/Projects/Projects';
-import Header from './Sections/Header/Header';
-import Hero from './Sections/Hero/Hero';
-import Services from './Sections/Services/Services';
-import Testimonials from './Sections/Testimonials/Testimonials';
+import About from './sections/About/About';
+import Footer from './sections/Footer/Footer';
+import Gallery from './sections/Projects/Projects';
+import Header from './sections/Header/Header';
+import Hero from './sections/Hero/Hero';
+import Services from './sections/Services/Services';
+import Testimonials from './sections/Testimonials/Testimonials';
 
 function App() {
   return (
     <>
-      <div className="header-hero-wrapper">
-        <Header />
+      <Header />
+      <main>
         <Hero />
-      </div>
-      <About />
-      <Services />
-      <Testimonials />
-      <Gallery />
+        <About />
+        <Services />
+        <Testimonials />
+        <Gallery />
+      </main>
       <Footer />
     </>
   );
