@@ -4,20 +4,20 @@ import scrollIndicator from "../../images/icon-arrow-down.svg";
 
 function Hero() {
     // Define CSS classes as variables
-    const containerClasses = `container mx-auto px-4 flex flex-col items-center 
-                               text-center lg:gap-28 md:gap-16 gap-20 
-                               lg:p-32 md:p-24 p-16`;
+    const containerClasses = `container mx-auto md:px-9 px-3 flex flex-col items-center 
+                               text-center md:gap-28 gap-16 
+                               md:py-28 py-16`;
 
-    const headingClasses = 'hero-heading uppercase font-fraunces text-white tracking-widest md:text-7xl text-5xl';
+    const headingClasses = 'hero-heading uppercase font-fraunces text-white tracking-widest lg:text-7xl md:text-5xl text-4xl';
 
     const indicatorClasses = 'hero-scroll-indicator';
 
     return (
         <section className="hero">
             <div className={containerClasses}>
-                <h2 className={headingClasses}>
+                <h1 className={headingClasses}>
                     We are creatives
-                </h2>
+                </h1>
                 <div className={indicatorClasses}>
                     <img src={scrollIndicator} alt="Scroll down indicator" />
                 </div>

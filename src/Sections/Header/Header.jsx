@@ -21,7 +21,7 @@ function Header() {
 
     return (
         <header className='py-6'>
-            <div className="container mx-auto px-4 flex justify-between items-center">
+            <div className="container mx-auto md:px-9 px-3 flex justify-between items-center">
                 <div className="header-logo">
                     <a href="#"><img src={logo} alt="suunySide Logo" /></a>
                 </div>

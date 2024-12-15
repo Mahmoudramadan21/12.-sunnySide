@@ -7,10 +7,10 @@ import XIcon from "../../images/icon-x.svg";
 import pinterestIcon from "../../images/icon-pinterest.svg";
 
 function Footer() {
-    const footerContainer = 'container mx-auto px-4 py-24 flex flex-col items-center gap-12';
+    const footerContainer = 'container mx-auto px-9 py-24 flex flex-col items-center gap-12';
     const logoStyle = 'sunnyside';
     const svgStyle = 'scale-[1.7]';
-    const navStyle = 'footer-nav flex flex-wrap md:gap-16 gap-8 text-[1.2rem] text-primary-footerCyan';
+    const navStyle = 'footer-nav flex flex-wrap md:gap-16 gap-8 text-[1.1rem] text-primary-footerCyan';
     const navItemStyle = 'nav-item';
     const linkStyle = 'transition-all duration-200 hover:text-white';
     const socialLinksContainer = 'footer-social-links flex gap-8 pt-12';

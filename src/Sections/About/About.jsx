@@ -35,7 +35,7 @@ function About() {
     const rowClasses = 'grid grid-cols-1 md:grid-cols-2 text-center md:text-left items-center';
     const itemClasses = 'about-item xl:p-32 md:p-7 flex flex-col items-center md:items-start p-12';
     const headingClasses = 'item-heading text-neutral-desaturatedBlue font-fraunces lg:text-5xl md:text-3xl text-4xl';
-    const textClasses = 'item-text my-4 lg:my-12 text-[1.1rem] lg:text-[1.2rem] max-w-[490px] text-neutral-grayishBlue';
+    const textClasses = 'item-text my-4 lg:my-12 text-[1.1rem] lg:text-[1.1rem] max-w-[440px] text-neutral-darkGrayishBlue';
     const linkClasses = 'item-link uppercase font-bold text-neutral-desaturatedBlue font-fraunces tracking-wide';
 
     return (

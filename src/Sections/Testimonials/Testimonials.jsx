@@ -5,13 +5,13 @@ import thomas from "../../images/image-thomas.jpg";
 // Define class variables
 const sectionClasses = "testimonials";
 const headingClasses = "text-center text-2xl font-bold font-fraunces text-neutral-lightGrayishBlue uppercase tracking-[5px] py-16";
-const containerClasses = "container mx-auto px-3 grid grid-cols-1 md:grid-cols-3 gap-16";
+const containerClasses = "mx-auto lg:px-24 md:px-12 px-3 grid grid-cols-1 md:grid-cols-3 gap-12";
 const testimonialItemClasses = "testimonial item flex flex-col items-center text-center gap-12";
 const testimonialImageClasses = "testimonial-image";
-const testimonialTextClasses = "testimonial-text text-[1.2rem] text-neutral-grayishBlue";
+const testimonialTextClasses = "testimonial-text text-[1.1rem] max-w-[380px] text-neutral-grayishBlue";
 const testimonialAuthorClasses = "testimonial-author";
-const authorNameClasses = "testimonial-author-name font-fraunces text-[1.4rem] text-neutral-desaturatedBlue mb-2";
-const authorRoleClasses = "testimonial-author-role text-neutral-lightGrayishBlue";
+const authorNameClasses = "testimonial-author-name font-fraunces text-[1.3rem] text-neutral-desaturatedBlue mb-2";
+const authorRoleClasses = "testimonial-author-role text-[0.9rem] text-neutral-lightGrayishBlue";
 
 function Testimonials() {
     return (
