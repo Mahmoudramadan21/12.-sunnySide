@@ -1,0 +1,42 @@
+:root {
+  /* Primary Colors */
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-cyan: hsl(167, 40%, 24%);
+  --dark-blue: hsl(198, 62%, 26%);
+  --footer-cyan: hsl(168, 34%, 41%);
+
+  /* Neutral Colors */
+  --desaturated-blue: hsl(212, 27%, 19%);
+  --grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --light-grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* .header-hero-wrapper { */
+header, .hero {
+  background-image: url("./images/desktop/image-header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  background-position: top;
+  background-size:auto;
+}
+
+@media (max-width: 768px) {
+  .header-hero-wrapper {
+    background-image: url("./images/mobile/image-header.jpg");
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Barlow', 'sans-serif';
+}
