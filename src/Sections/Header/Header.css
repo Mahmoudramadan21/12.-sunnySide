@@ -1,7 +1,15 @@
 .header-logo img {
-    transform: scale(1.5);
+    transform: scale(1.2);
+    position: relative;
+    left: 15px;
 }
 
+@media (min-width: 768px) {
+    .header-logo img {
+        transform: scale(1.5);
+        left: 30px;
+    }
+}
 @media(max-width: 768px) {
     .header-nav .open-hamburger{
         position: absolute;
