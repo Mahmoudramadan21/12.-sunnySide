@@ -1,24 +1,24 @@
-.hero .container {
-    /* padding: 7rem 0; */
-    height: 80vh;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (max-width: 768px) {
-    .hero .container {
-        height: 65vh;
+@layer components {
+    .hero {
+        @apply h-[80vh] md:h-[75vh] text-center;
     }
-}
 
-.hero-heading {
-    text-transform: uppercase;
-    font-family: 'Fraunces', serif;
-    color: white;
-    letter-spacing: 0.3rem;
-}
+    .hero-container {
+        @apply mx-auto flex flex-col items-center text-center md:gap-20 gap-24 md:py-28 py-24 px-3;
+        height: 100%;
+    }
 
-.hero-scroll-indicator img {
-    width: 2rem;
-    animation: bounce 2s infinite;
+    .hero-heading {
+        @apply uppercase font-fraunces tracking-widest lg:text-7xl md:text-5xl text-4xl text-white;
+    }
+
+    .hero-scroll-indicator {
+        @apply w-8 animate-bounce;
+    }
 }
 
 @keyframes bounce {

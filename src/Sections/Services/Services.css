@@ -1,5 +1,29 @@
-@media (max-width: 768px) {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .services {
+        @apply grid grid-cols-1 md:grid-cols-2;
+    }
+
+    .service-item {
+        @apply relative;
+    }
+
+    .service-img {
+        @apply w-full;
+    }
+
     .service-info {
-        width: calc(100vw - 20px);
+        @apply absolute bottom-10 left-1/2 -translate-x-1/2 text-center w-[90%] md:w-[370px];
+    }
+
+    .service-title {
+        @apply font-fraunces text-3xl lg:mb-7 md:mb-3 mb-6;
+    }
+
+    .service-description {
+        @apply lg:text-[1.1rem] md:text-[0.9rem] text-[1.1rem] opacity-80;
     }
 }

@@ -1,41 +1,88 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
 import "./Header.css";
-import logo from "../../images/logo.svg"
-import hamburager from "../../images/icon-hamburger.svg";
+import logo from "../../images/logo.svg";
+import hamburgerIcon from "../../images/icon-hamburger.svg";
+
+const navLinks = [
+    { href: "#about", label: "About" },
+    { href: "#services", label: "Services" },
+    { href: "#projects", label: "Projects" },
+    { href: "#footer", label: "Contact", isButton: true },
+];
 
 function Header() {
     const [openHamburger, setOpenHamburger] = useState(false);
 
-    // Define CSS classes as variables
-    const navClasses = `hidden md:flex justify-between gap-7 font-bold text-slate-200 
-                        ${openHamburger ? "open-hamburger" : ""}`;
+    useEffect(() => {
+        const handleEscape = (event) => {
+            if (event.key === "Escape") {
+                setOpenHamburger(false);
+            }
+        };
 
-    const linkClasses = 'header-link hover:text-white transition-all duration-300';
+        const handleClickOutside = (event) => {
+            const navMenu = document.querySelector(".nav-menu");
+            if (navMenu && !navMenu.contains(event.target)) {
+                setOpenHamburger(false);
+            }
+        };
 
-    const buttonClasses = `header-button font-fraunces px-6 py-3 bg-white text-neutral-desaturatedBlue 
-                           rounded-3xl uppercase text-sm 
-                           transition-all duration-300 
-                           hover:text-white hover:bg-opacity-35`;
+        if (openHamburger) {
+            window.addEventListener("keydown", handleEscape);
+            document.addEventListener("mousedown", handleClickOutside);
+        }
 
-    const hamburgerClasses = "hamburgar md:hidden";
+        return () => {
+            window.removeEventListener("keydown", handleEscape);
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [openHamburger]);
+
+    useEffect(() => {
+        if (openHamburger) {
+            const firstLink = document.querySelector(".nav-menu a");
+            if (firstLink) firstLink.focus();
+        } else {
+            const hamburgerButton = document.querySelector(".hamburger");
+            if (hamburgerButton) hamburgerButton.focus();
+        }
+    }, [openHamburger]);
 
     return (
-        <header className='py-6'>
-            <div className="container mx-auto md:px-9 px-3 flex justify-between items-center">
-                <div className="header-logo">
-                    <a href="#"><img src={logo} alt="suunySide Logo" /></a>
-                </div>
-                <nav className="header-nav" aria-label="Main navigation">
-                    <ul className={navClasses}>
-                        <li><a href="#about" className={linkClasses}>About</a></li>
-                        <li><a href="#services" className={linkClasses}>Services</a></li>
-                        <li><a href="#projects" className={linkClasses}>Projects</a></li>
-                        <li><a href="#footer" className={buttonClasses}>Contact</a></li>
+        <header>
+            <div className="container">
+                <a href="#" className="header-logo" aria-label="SunnySide Home">
+                    <img src={logo} alt="SunnySide Logo" />
+                </a>
+
+                <nav className="header-nav" aria-label="Main navigation" role="navigation">
+                    <ul
+                        className={`nav-menu ${openHamburger ? "open-hamburger" : "hidden md:flex"}`}
+                        id="main-menu"
+                    >
+                        {navLinks.map(({ href, label, isButton }, index) => (
+                            <li key={index}>
+                                <a
+                                    href={href}
+                                    className={isButton ? "header-button" : "header-link"}
+                                >
+                                    {label}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
 
-                <button className={hamburgerClasses} type='button' onClick={() => setOpenHamburger(!openHamburger)}>
-                    <img src={hamburager} alt="Hamburger Icon" />
+                <button
+                    className="hamburger"
+                    type="button"
+                    onClick={() => setOpenHamburger(!openHamburger)}
+                    aria-label="Toggle navigation menu"
+                    aria-expanded={openHamburger}
+                    aria-controls="main-menu"
+                    aria-haspopup="true"
+                >
+                    <img src={hamburgerIcon} alt="Open menu" />
                 </button>
             </div>
         </header>
