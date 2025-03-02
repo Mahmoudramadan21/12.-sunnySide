@@ -11,15 +11,6 @@
         @apply grid grid-cols-1 md:grid-cols-2 items-center;
     }
 
-<<<<<<< HEAD
-.about #about-2 .item-link::before {
-    background-color: var(--soft-red);
-}
-
-.about #about-2 .item-link:hover::before {
-    opacity: 1;
-}
-=======
     .about-item {
         @apply flex flex-col items-center md:items-start p-12 md:p-7 xl:p-24;
     }
@@ -53,4 +44,3 @@
         @apply w-full;
     }
 }
->>>>>>> 179a13a (Improve: Enhance accessibility by adding ARIA labels and focus styles)

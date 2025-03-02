@@ -6,26 +6,9 @@
     header {
         @apply py-6;
     }
-<<<<<<< HEAD
-}
-@media(max-width: 768px) {
-    .header-nav .open-hamburger{
-        position: absolute;
-        top: 110px;
-        right: 16px;
-        width: calc(100vw - 32px);
-        padding: 24px;
-        text-align: center;
-        background-color: white;
-        color: var(--light-grayish-blue);
-        display: flex;
-        flex-direction: column;
-        z-index: 10;
-=======
 
     header .container {
         @apply mx-auto flex items-center justify-between px-3 md:px-9;
->>>>>>> 179a13a (Improve: Enhance accessibility by adding ARIA labels and focus styles)
     }
 
     .header-logo {
