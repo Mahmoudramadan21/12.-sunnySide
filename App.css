@@ -1,3 +1,9 @@
+:focus-visible {
+  outline: 2px solid var(--desaturated-blue);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
 :root {
   /* Primary Colors */
   --soft-red: hsl(7, 99%, 70%);
@@ -15,7 +21,8 @@
 }
 
 /* .header-hero-wrapper { */
-header, .hero {
+header,
+.hero {
   background-image: url("./images/desktop/image-header.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +31,7 @@ header, .hero {
 
 header {
   background-position: top;
-  background-size:auto;
+  background-size: auto;
 }
 
 @media (max-width: 768px) {

@@ -1,52 +1,49 @@
-.header-logo img {
-    transform: scale(1.2);
-    position: relative;
-    left: 15px;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (min-width: 768px) {
-    .header-logo img {
-        transform: scale(1.5);
-        left: 30px;
+@layer components {
+    header {
+        @apply py-6;
     }
-}
-@media(max-width: 768px) {
-    .header-nav .open-hamburger{
-        position: absolute;
-        top: 110px;
-        right: 16px;
-        width: calc(100vw - 32px);
-        padding: 24px;
-        text-align: center;
-        background-color: white;
-        color: var(--light-grayish-blue);
-        display: flex;
-        flex-direction: column;
+
+    header .container {
+        @apply mx-auto flex items-center justify-between px-3 md:px-9;
     }
-    
-    .header-nav .open-hamburger .header-link {
-        color: var(--dark-grayish-blu);
+
+    .header-logo {
+        @apply relative left-[15px] scale-[1.2] md:left-[30px] md:scale-[1.5];
     }
-        
-    .header-nav .open-hamburger .header-link:hover {
-        color: black;
+
+    .nav-menu {
+        @apply gap-7 font-bold text-slate-200;
     }
-    
-    .header-nav .open-hamburger .header-button {
-        background-color: var(--yellow);
+
+    .header-link {
+        @apply transition-all duration-300 hover:text-white;
     }
-    
-    .header-nav .open-hamburger .header-button:hover {
-        background-color: hsl(53, 100%, 49%);
-        color: black;
+
+    .header-button {
+        @apply font-fraunces uppercase text-sm px-6 py-3 bg-white text-neutral-desaturatedBlue rounded-3xl transition-all duration-300 hover:text-white hover:bg-opacity-35;
     }
-    
-    .header-nav .open-hamburger::after {
-        content: "";
-        position: absolute;
-        border-width: 30px 30px;
-        border-color: transparent white transparent transparent;
-        top: -28px;
-        right: 0;
+
+    .hamburger {
+        @apply md:hidden;
+    }
+
+    .open-hamburger {
+        @apply absolute top-[110px] right-[16px] z-10 flex flex-col w-[calc(100vw-32px)] p-6 text-center bg-white text-gray-400;
+    }
+
+    .open-hamburger .header-link {
+        @apply text-gray-600 hover:text-black;
+    }
+
+    .open-hamburger .header-button {
+        @apply px-6 py-3 bg-yellow-400 rounded-md hover:bg-yellow-300 hover:text-black;
+    }
+
+    .open-hamburger::after {
+        @apply absolute top-[-28px] right-0 border-[30px] border-transparent border-r-white content-[''];
     }
 }

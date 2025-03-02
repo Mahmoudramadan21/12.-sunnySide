@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .testimonials {
+        @apply text-center;
+    }
+
+    .testimonial-heading {
+        @apply text-center py-16 text-2xl font-bold font-fraunces uppercase tracking-[5px] text-neutral-lightGrayishBlue;
+    }
+
+    .testimonial-container {
+        @apply grid grid-cols-1 md:grid-cols-3 mx-auto lg:px-24 md:px-12 px-3 gap-12;
+    }
+
+    .testimonial-item {
+        @apply flex flex-col items-center text-center gap-12;
+    }
+
+    .testimonial-image {
+        @apply flex justify-center;
+    }
+
+    .testimonial-img {
+        @apply w-20 rounded-full;
+    }
+
+    .testimonial-text {
+        @apply max-w-[380px] text-[1.1rem] text-neutral-grayishBlue;
+    }
+
+    .testimonial-author {
+        @apply text-center;
+    }
+
+    .testimonial-author-name {
+        @apply font-fraunces text-[1.3rem] mb-2 text-neutral-desaturatedBlue;
+    }
+
+    .testimonial-author-role {
+        @apply text-[0.9rem] text-neutral-lightGrayishBlue;
+    }
+}

@@ -1,5 +1,39 @@
-.footer-social-icon {
-    transition: filter 0.3s ease;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .footer-container {
+        @apply flex flex-col items-center gap-12 py-24 px-9 bg-teal-200;
+    }
+
+    .footer-logo {
+        @apply scale-[1.7] text-3xl font-bold text-primary-footerCyan;
+    }
+
+    .footer-nav {
+        @apply flex flex-wrap justify-center gap-8 md:gap-16 text-lg text-primary-footerCyan;
+    }
+
+    .footer-nav a {
+        @apply transition-colors duration-200 hover:text-white;
+    }
+
+    .footer-social {
+        @apply flex gap-6 pt-8;
+    }
+
+    .footer-social a {
+        @apply transition-opacity duration-300 hover:opacity-80;
+    }
+
+    .footer-social img {
+        @apply w-6 h-6;
+    }
+
+    .footer-social-icon {
+        @apply transition-all duration-300;
+    }
 }
 
 .footer-social-icon:hover {
