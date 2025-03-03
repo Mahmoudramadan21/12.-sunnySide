@@ -29,7 +29,7 @@
 
     .about-link::before {
         content: "";
-        @apply absolute bottom-1 left-[-10%] w-[120%] h-2 bg-primary-yellow opacity-50 rounded-lg transition-all duration-300;
+        @apply absolute bottom-1 left-[-10%] w-[120%] -z-10 h-2 bg-primary-yellow opacity-50 rounded-lg transition-all duration-300;
     }
 
     #about-2 .about-link::before {
