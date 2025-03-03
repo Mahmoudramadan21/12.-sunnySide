@@ -1,0 +1,31 @@
+.about .about-image img {
+    width: 100%;
+}
+
+.about .item-link {
+    position: relative;
+    width: fit-content;
+    left: 10px;
+}
+
+.about .item-link::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 8px;
+    bottom: 1px;
+    left: -10%;
+    background-color: var(--yellow);
+    opacity: 0.5;
+    border-radius: 8px;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.about #about-2 .item-link::before {
+    background-color: var(--soft-red);
+}
+
+.about #about-2 .item-link:hover::before {
+    opacity: 1;
+}
