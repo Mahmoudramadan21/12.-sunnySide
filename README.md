@@ -19,7 +19,8 @@ To get started with this project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/sunnyside.git
+   
+   git clone https://github.com/Mahmoudramadan21/12.-sunnySide.git
    ```
 
 2. Navigate into the project directory:
